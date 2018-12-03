@@ -1,6 +1,6 @@
 init:
-	pip install pipenv
-	pipenv install --dev --skip-lock
+	pip install -r reqs/dev-requirements.txt
+	pip install -r reqs/travis-requirements.txt
 
 test:
 	py.test -rf -s --cov=lifelines -vv --block=False --cov-report term-missing
