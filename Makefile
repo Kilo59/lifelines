@@ -21,7 +21,3 @@ ifeq ($(TRAVIS_PYTHON_VERSION), 3.6)
 else
 		echo "Only check format on Python3.6"
 endif
-
-update_reqs:
-	pipenv lock -r > requirements.txt
-	pipenv lock -r --dev > dev-requirements.txt
