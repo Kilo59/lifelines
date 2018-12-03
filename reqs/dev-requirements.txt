@@ -3,4 +3,4 @@ pytest
 pytest-cov
 pypandoc
 prospector
-black=="stable";python_version > '3.5'
+black;python_version > '3.5'
