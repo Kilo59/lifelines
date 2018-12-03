@@ -1,6 +1,8 @@
 init:
 	pip install -r reqs/dev-requirements.txt
-	pip install -r reqs/travis-requirements.txt
+ifeq ($(TRAVIS), true)
+		pip install -r reqs/travis-requirements.txt
+endif
 
 test:
 	py.test -rf -s --cov=lifelines -vv --block=False --cov-report term-missing
