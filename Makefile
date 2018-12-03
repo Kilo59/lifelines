@@ -3,7 +3,7 @@ init:
 	pipenv install --dev --skip-lock
 
 test:
-	pipenv run py.test -rf -s --cov=lifelines -vv --block=False --cov-report term-missing
+	py.test -rf -s --cov=lifelines -vv --block=False --cov-report term-missing
 
 lint:
 ifeq ($(TRAVIS_PYTHON_VERSION), 2.7)
